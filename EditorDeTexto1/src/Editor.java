@@ -20,6 +20,7 @@ import java.awt.event.InputMethodListener;
 import java.awt.event.InputMethodEvent;
 import javax.swing.event.ChangeListener;
 import javax.swing.event.ChangeEvent;
+import javax.swing.JLabel;
 
 public class Editor {
 
@@ -116,12 +117,16 @@ public class Editor {
 		spinner_1.addChangeListener(new ChangeListener() {
 			public void stateChanged(ChangeEvent arg0) {
 				int tamaño = (int) spinner_1.getValue();
-				textPane.setFont(textPane.getFont().deriveFont(tamaño));
+				textPane.setFont(textPane.getFont().deriveFont((float)tamaño));
 			}
 		});
 		
-		spinner_1.setBounds(401, 11, 30, 20);
+		spinner_1.setBounds(414, 11, 49, 20);
 		frame.getContentPane().add(spinner_1);
+		
+		JLabel lblTamañoTexto = new JLabel("Tama\u00F1o texto");
+		lblTamañoTexto.setBounds(334, 14, 70, 14);
+		frame.getContentPane().add(lblTamañoTexto);
 
 		JMenuBar menuBar = new JMenuBar();
 		frame.setJMenuBar(menuBar);
