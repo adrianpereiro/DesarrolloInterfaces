@@ -18,6 +18,8 @@ import javax.swing.JComboBox;
 import javax.swing.SpinnerNumberModel;
 import java.awt.event.InputMethodListener;
 import java.awt.event.InputMethodEvent;
+import javax.swing.event.ChangeListener;
+import javax.swing.event.ChangeEvent;
 
 public class Editor {
 
@@ -111,6 +113,12 @@ public class Editor {
 		barraPegar.setToolTipText("Pegar");
 		
 		JSpinner spinner_1 = new JSpinner();
+		spinner_1.addChangeListener(new ChangeListener() {
+			public void stateChanged(ChangeEvent arg0) {
+				int tamaño = (int) spinner_1.getValue();
+				textPane.setFont(textPane.getFont().deriveFont(tamaño));
+			}
+		});
 		
 		spinner_1.setBounds(401, 11, 30, 20);
 		frame.getContentPane().add(spinner_1);

@@ -10,12 +10,18 @@ import java.nio.charset.StandardCharsets;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.JTextPane;
+import javax.swing.text.StyledEditorKit.FontSizeAction;
 
 public class editorTexto extends Editor {
 	
 	public static void cambiarFuente(String nombreFuente, JTextPane texto) {
 		Font fuente = new Font(nombreFuente, Font.PLAIN, 12);
 		texto.setFont(fuente);
+	}
+	
+	public static void cambiarTamaño(int tamañoFuente, Font fuente) {
+
+		
 	}
 
 	public static void guardarArchivo(JTextPane texto) {
@@ -102,5 +108,6 @@ public class editorTexto extends Editor {
 			e.printStackTrace();
 		}		
 	}
+
 
 }
