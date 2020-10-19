@@ -6,11 +6,9 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
-
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.JTextPane;
-import javax.swing.text.StyledEditorKit.FontSizeAction;
 
 public class editorTexto extends Editor {
 
@@ -19,13 +17,10 @@ public class editorTexto extends Editor {
 		texto.setFont(fuente);
 	}
 
-
 	public static void guardarArchivo(JTextPane texto) {
 		String ruta = "";
 		String textoUsuario = texto.getText();
 		JFileChooser guardar = new JFileChooser();
-
-		// int creado= 0;
 
 		int returnValue = guardar.showSaveDialog(null);
 		if (returnValue == JFileChooser.APPROVE_OPTION) {
@@ -39,7 +34,6 @@ public class editorTexto extends Editor {
 					f.createNewFile();
 					copiarFichero(f, textoUsuario);
 					JOptionPane.showMessageDialog(null, "Fichero creado correctamente");
-					// creado=1;
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
@@ -50,7 +44,6 @@ public class editorTexto extends Editor {
 	public static void abrirArchivo(JTextPane texto) {
 		String ruta = "";
 		JFileChooser abrir = new JFileChooser();
-		Font f2=new Font(null);
 		int creado = 0;
 		do {
 			int returnValue = abrir.showOpenDialog(null);
@@ -103,4 +96,16 @@ public class editorTexto extends Editor {
 		}
 	}
 
+	public static void asegurarDatos(boolean cambio, JTextPane textPane) {
+		if (cambio == true) {
+			int guardar = JOptionPane.showConfirmDialog(null, "Hay cambios, quieres guardar antes?");
+			if (guardar == JFileChooser.APPROVE_OPTION) {
+				guardarArchivo(textPane);
+				textPane.setText(null);
+			}
+		}
+		if (cambio == false) {
+			textPane.setText(null);
+		}
+	}
 }

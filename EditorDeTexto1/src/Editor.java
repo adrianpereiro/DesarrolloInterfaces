@@ -14,17 +14,17 @@ import java.awt.event.ActionEvent;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import javax.swing.JSpinner;
-import javax.swing.JComboBox;
 import javax.swing.SpinnerNumberModel;
-import java.awt.event.InputMethodListener;
-import java.awt.event.InputMethodEvent;
 import javax.swing.event.ChangeListener;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
 import javax.swing.event.ChangeEvent;
 import javax.swing.JLabel;
 
 public class Editor {
 
 	private JFrame frame;
+	boolean cambio = false;
 
 	/**
 	 * Launch the application.
@@ -54,11 +54,13 @@ public class Editor {
 	 */
 	public void initialize() {
 		frame = new JFrame();
+		JTextPane textPane = new JTextPane();
 		frame.addWindowListener(new WindowAdapter() {
 			@Override
 			public void windowClosing(WindowEvent e) {
 				int res = JOptionPane.showConfirmDialog(null, "Cerrar?");
 				if (res == JFileChooser.APPROVE_OPTION) {
+					editorTexto.asegurarDatos(cambio, textPane);
 					frame.dispose();
 				}
 			}
@@ -67,7 +69,25 @@ public class Editor {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 
-		JTextPane textPane = new JTextPane();
+		textPane.getDocument().addDocumentListener(new DocumentListener() {
+
+			@Override
+			public void removeUpdate(DocumentEvent arg0) {
+				cambio = true;
+
+			}
+
+			@Override
+			public void insertUpdate(DocumentEvent arg0) {
+				cambio = true;
+			}
+
+			@Override
+			public void changedUpdate(DocumentEvent arg0) {
+				cambio = true;
+
+			}
+		});
 		textPane.setBounds(81, 52, 749, 427);
 		frame.getContentPane().add(textPane);
 
@@ -78,7 +98,10 @@ public class Editor {
 		JButton barraNuevo = new JButton("");
 		barraNuevo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				editorTexto.asegurarDatos(cambio, textPane);
+				cambio = false;
 				textPane.setText(null);
+
 			}
 		});
 		menuBar_1.add(barraNuevo);
@@ -89,6 +112,7 @@ public class Editor {
 		barraGuardar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				editorTexto.guardarArchivo(textPane);
+				cambio = false;
 			}
 		});
 		menuBar_1.add(barraGuardar);
@@ -112,19 +136,19 @@ public class Editor {
 		menuBar_1.add(barraPegar);
 		barraPegar.setIcon(new ImageIcon("C:\\Users\\PC33\\Desktop\\iconoCopiar.png"));
 		barraPegar.setToolTipText("Pegar");
-		
+
 		JSpinner spinner_1 = new JSpinner();
 		spinner_1.setValue(textPane.getFont().getSize());
 		spinner_1.addChangeListener(new ChangeListener() {
-			public void stateChanged(ChangeEvent arg0) {				
+			public void stateChanged(ChangeEvent arg0) {
 				int tamaño = (int) spinner_1.getValue();
-				textPane.setFont(textPane.getFont().deriveFont((float)tamaño));
+				textPane.setFont(textPane.getFont().deriveFont((float) tamaño));
 			}
 		});
-		
+
 		spinner_1.setBounds(414, 11, 49, 20);
 		frame.getContentPane().add(spinner_1);
-		
+
 		JLabel lblTamañoTexto = new JLabel("Tama\u00F1o texto");
 		lblTamañoTexto.setBounds(334, 14, 78, 14);
 		frame.getContentPane().add(lblTamañoTexto);
@@ -138,7 +162,8 @@ public class Editor {
 		JMenuItem mntmNuevoArchivo = new JMenuItem("Nuevo");
 		mntmNuevoArchivo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				textPane.setText(null);
+				editorTexto.asegurarDatos(cambio, textPane);
+				cambio = false;
 			}
 		});
 		mnFicheros.add(mntmNuevoArchivo);
@@ -146,6 +171,8 @@ public class Editor {
 		JMenuItem mntmAbrirArchivo = new JMenuItem("Abrir");
 		mntmAbrirArchivo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				editorTexto.asegurarDatos(cambio, textPane);
+				cambio = false;
 				editorTexto.abrirArchivo(textPane);
 			}
 		});
@@ -155,6 +182,7 @@ public class Editor {
 		mntmGuardarArchivo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				editorTexto.guardarArchivo(textPane);
+				cambio = false;
 			}
 		});
 		mnFicheros.add(mntmGuardarArchivo);
@@ -163,11 +191,6 @@ public class Editor {
 		mnFicheros.add(mntmGuardarComo);
 
 		JMenu mnEditar = new JMenu("Editar");
-		mnEditar.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-
-			}
-		});
 		menuBar.add(mnEditar);
 
 		JMenu mnSeleccionarFuente = new JMenu("Seleccionar fuente");
@@ -188,10 +211,10 @@ public class Editor {
 			}
 		});
 		mnSeleccionarFuente.add(fuenteComicSans);
-		
+
 		JMenu mnT = new JMenu("Tama\u00F1o fuente");
 		mnEditar.add(mnT);
-		
+
 		JSpinner spinner = new JSpinner();
 		spinner.setModel(new SpinnerNumberModel(new Integer(0), null, null, new Integer(1)));
 		mnT.add(spinner);
