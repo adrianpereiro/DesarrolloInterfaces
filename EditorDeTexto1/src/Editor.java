@@ -211,6 +211,7 @@ public class Editor {
 			}
 		});
 		mnSeleccionarFuente.add(fuenteComicSans);
+		String kk;
 
 		JMenu mnT = new JMenu("Tama\u00F1o fuente");
 		mnEditar.add(mnT);
