@@ -114,8 +114,9 @@ public class Editor {
 		barraPegar.setToolTipText("Pegar");
 		
 		JSpinner spinner_1 = new JSpinner();
+		spinner_1.setValue(textPane.getFont().getSize());
 		spinner_1.addChangeListener(new ChangeListener() {
-			public void stateChanged(ChangeEvent arg0) {
+			public void stateChanged(ChangeEvent arg0) {				
 				int tamaño = (int) spinner_1.getValue();
 				textPane.setFont(textPane.getFont().deriveFont((float)tamaño));
 			}
@@ -125,7 +126,7 @@ public class Editor {
 		frame.getContentPane().add(spinner_1);
 		
 		JLabel lblTamañoTexto = new JLabel("Tama\u00F1o texto");
-		lblTamañoTexto.setBounds(334, 14, 70, 14);
+		lblTamañoTexto.setBounds(334, 14, 78, 14);
 		frame.getContentPane().add(lblTamañoTexto);
 
 		JMenuBar menuBar = new JMenuBar();
