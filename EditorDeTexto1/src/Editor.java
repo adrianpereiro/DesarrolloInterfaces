@@ -106,7 +106,7 @@ public class Editor {
 		});
 		menuBar_1.add(barraNuevo);
 		barraNuevo.setToolTipText("Crear archivo");
-		barraNuevo.setIcon(new ImageIcon("C:\\Users\\PC33\\Desktop\\iconoArchivoNuevo (2).png"));
+		barraNuevo.setIcon(new ImageIcon(Editor.class.getResource("/Imagenes/iconoArchivoNuevo (2).png")));
 
 		JButton barraGuardar = new JButton("");
 		barraGuardar.addActionListener(new ActionListener() {
@@ -117,24 +117,24 @@ public class Editor {
 		});
 		menuBar_1.add(barraGuardar);
 		barraGuardar.setToolTipText("Guardar archivo");
-		barraGuardar.setIcon(new ImageIcon("C:\\Users\\PC33\\Desktop\\iconoGuardar.png"));
+		barraGuardar.setIcon(new ImageIcon(Editor.class.getResource("/Imagenes/iconoGuardar.png")));
 
 		JButton barraCortar = new JButton(new DefaultEditorKit.CutAction());
 		barraCortar.setText("");
 		menuBar_1.add(barraCortar);
 		barraCortar.setToolTipText("Cortar");
-		barraCortar.setIcon(new ImageIcon("C:\\Users\\PC33\\Desktop\\iconoCortar.png"));
+		barraCortar.setIcon(new ImageIcon(Editor.class.getResource("/Imagenes/iconoCortar.png")));
 
 		JButton barraCopiar = new JButton(new DefaultEditorKit.CopyAction());
 		barraCopiar.setText("");
 		barraCopiar.setToolTipText("Copiar");
 		menuBar_1.add(barraCopiar);
-		barraCopiar.setIcon(new ImageIcon("C:\\Users\\PC33\\Desktop\\iconoPegar.png"));
+		barraCopiar.setIcon(new ImageIcon(Editor.class.getResource("/Imagenes/iconoCopiar.png")));
 
 		JButton barraPegar = new JButton(new DefaultEditorKit.PasteAction());
 		barraPegar.setText("");
 		menuBar_1.add(barraPegar);
-		barraPegar.setIcon(new ImageIcon("C:\\Users\\PC33\\Desktop\\iconoCopiar.png"));
+		barraPegar.setIcon(new ImageIcon(Editor.class.getResource("/Imagenes/iconoPegar.png")));
 		barraPegar.setToolTipText("Pegar");
 
 		JSpinner spinner_1 = new JSpinner();
