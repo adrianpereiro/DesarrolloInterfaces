@@ -20,6 +20,8 @@ import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 import javax.swing.event.ChangeEvent;
 import javax.swing.JLabel;
+import java.awt.Color;
+import java.awt.SystemColor;
 
 public class Editor {
 
@@ -54,6 +56,7 @@ public class Editor {
 	 */
 	public void initialize() {
 		frame = new JFrame();
+		frame.getContentPane().setBackground(SystemColor.menu);
 		JTextPane textPane = new JTextPane();
 		frame.addWindowListener(new WindowAdapter() {
 			@Override
@@ -177,7 +180,7 @@ public class Editor {
 			}
 		});
 		mnFicheros.add(mntmAbrirArchivo);
-
+		
 		JMenuItem mntmGuardarArchivo = new JMenuItem("Guardar");
 		mntmGuardarArchivo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
