@@ -5,6 +5,8 @@ import javax.swing.JTable;
 import javax.swing.JScrollPane;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JComboBox;
+import javax.swing.JButton;
+import java.awt.BorderLayout;
 
 
 public class Tabla {
@@ -12,6 +14,7 @@ public class Tabla {
 	private JFrame frame;
 	private JTable tbCoches;
 	private JComboBox<Coche> cbCoches;
+	private JButton btnNuevoCoche;
 
 	/**
 	 * Launch the application.
@@ -43,6 +46,9 @@ public class Tabla {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 501, 325);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		btnNuevoCoche = new JButton("A\u00F1adir Coche");
+		frame.getContentPane().add(btnNuevoCoche, BorderLayout.EAST);
 		
 		JScrollPane spCoches = new JScrollPane();
 		
