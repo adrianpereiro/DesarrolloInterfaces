@@ -1,5 +1,10 @@
 
 public class Coche {
+	@Override
+	public String toString() {
+		return marca ;
+	}
+
 	private String marca;
 	private String modelo;
 	private String color;
