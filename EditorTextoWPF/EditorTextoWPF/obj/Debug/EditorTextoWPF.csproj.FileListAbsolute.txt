@@ -1,0 +1,15 @@
+C:\Users\PC33\Desktop\Clase\VisualStudio\DesarrolloInterfaces\EditorTextoWPF\EditorTextoWPF\bin\Debug\EditorTextoWPF.exe.config
+C:\Users\PC33\Desktop\Clase\VisualStudio\DesarrolloInterfaces\EditorTextoWPF\EditorTextoWPF\bin\Debug\EditorTextoWPF.exe
+C:\Users\PC33\Desktop\Clase\VisualStudio\DesarrolloInterfaces\EditorTextoWPF\EditorTextoWPF\bin\Debug\EditorTextoWPF.pdb
+C:\Users\PC33\Desktop\Clase\VisualStudio\DesarrolloInterfaces\EditorTextoWPF\EditorTextoWPF\obj\Debug\EditorTextoWPF.csprojAssemblyReference.cache
+C:\Users\PC33\Desktop\Clase\VisualStudio\DesarrolloInterfaces\EditorTextoWPF\EditorTextoWPF\obj\Debug\MainWindow.g.cs
+C:\Users\PC33\Desktop\Clase\VisualStudio\DesarrolloInterfaces\EditorTextoWPF\EditorTextoWPF\obj\Debug\App.g.cs
+C:\Users\PC33\Desktop\Clase\VisualStudio\DesarrolloInterfaces\EditorTextoWPF\EditorTextoWPF\obj\Debug\EditorTextoWPF_MarkupCompile.cache
+C:\Users\PC33\Desktop\Clase\VisualStudio\DesarrolloInterfaces\EditorTextoWPF\EditorTextoWPF\obj\Debug\EditorTextoWPF_MarkupCompile.lref
+C:\Users\PC33\Desktop\Clase\VisualStudio\DesarrolloInterfaces\EditorTextoWPF\EditorTextoWPF\obj\Debug\MainWindow.baml
+C:\Users\PC33\Desktop\Clase\VisualStudio\DesarrolloInterfaces\EditorTextoWPF\EditorTextoWPF\obj\Debug\EditorTextoWPF.g.resources
+C:\Users\PC33\Desktop\Clase\VisualStudio\DesarrolloInterfaces\EditorTextoWPF\EditorTextoWPF\obj\Debug\EditorTextoWPF.Properties.Resources.resources
+C:\Users\PC33\Desktop\Clase\VisualStudio\DesarrolloInterfaces\EditorTextoWPF\EditorTextoWPF\obj\Debug\EditorTextoWPF.csproj.GenerateResource.cache
+C:\Users\PC33\Desktop\Clase\VisualStudio\DesarrolloInterfaces\EditorTextoWPF\EditorTextoWPF\obj\Debug\EditorTextoWPF.csproj.CoreCompileInputs.cache
+C:\Users\PC33\Desktop\Clase\VisualStudio\DesarrolloInterfaces\EditorTextoWPF\EditorTextoWPF\obj\Debug\EditorTextoWPF.exe
+C:\Users\PC33\Desktop\Clase\VisualStudio\DesarrolloInterfaces\EditorTextoWPF\EditorTextoWPF\obj\Debug\EditorTextoWPF.pdb

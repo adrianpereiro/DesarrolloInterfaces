@@ -1,0 +1,17 @@
+C:\Users\PC33\Desktop\Clase\VisualStudio\DesarrolloInterfaces\datosPersona\datosPersona\bin\Debug\datosPersona.exe.config
+C:\Users\PC33\Desktop\Clase\VisualStudio\DesarrolloInterfaces\datosPersona\datosPersona\bin\Debug\datosPersona.exe
+C:\Users\PC33\Desktop\Clase\VisualStudio\DesarrolloInterfaces\datosPersona\datosPersona\bin\Debug\datosPersona.pdb
+C:\Users\PC33\Desktop\Clase\VisualStudio\DesarrolloInterfaces\datosPersona\datosPersona\obj\Debug\datosPersona.csprojAssemblyReference.cache
+C:\Users\PC33\Desktop\Clase\VisualStudio\DesarrolloInterfaces\datosPersona\datosPersona\obj\Debug\MainWindow.g.cs
+C:\Users\PC33\Desktop\Clase\VisualStudio\DesarrolloInterfaces\datosPersona\datosPersona\obj\Debug\App.g.cs
+C:\Users\PC33\Desktop\Clase\VisualStudio\DesarrolloInterfaces\datosPersona\datosPersona\obj\Debug\datosPersona_MarkupCompile.cache
+C:\Users\PC33\Desktop\Clase\VisualStudio\DesarrolloInterfaces\datosPersona\datosPersona\obj\Debug\datosPersona_MarkupCompile.lref
+C:\Users\PC33\Desktop\Clase\VisualStudio\DesarrolloInterfaces\datosPersona\datosPersona\obj\Debug\MainWindow.baml
+C:\Users\PC33\Desktop\Clase\VisualStudio\DesarrolloInterfaces\datosPersona\datosPersona\obj\Debug\datosPersona.g.resources
+C:\Users\PC33\Desktop\Clase\VisualStudio\DesarrolloInterfaces\datosPersona\datosPersona\obj\Debug\datosPersona.Properties.Resources.resources
+C:\Users\PC33\Desktop\Clase\VisualStudio\DesarrolloInterfaces\datosPersona\datosPersona\obj\Debug\datosPersona.csproj.GenerateResource.cache
+C:\Users\PC33\Desktop\Clase\VisualStudio\DesarrolloInterfaces\datosPersona\datosPersona\obj\Debug\datosPersona.csproj.CoreCompileInputs.cache
+C:\Users\PC33\Desktop\Clase\VisualStudio\DesarrolloInterfaces\datosPersona\datosPersona\obj\Debug\datosPersona.exe
+C:\Users\PC33\Desktop\Clase\VisualStudio\DesarrolloInterfaces\datosPersona\datosPersona\obj\Debug\datosPersona.pdb
+C:\Users\PC33\Desktop\Clase\VisualStudio\DesarrolloInterfaces\datosPersona\datosPersona\obj\Debug\Window1.g.cs
+C:\Users\PC33\Desktop\Clase\VisualStudio\DesarrolloInterfaces\datosPersona\datosPersona\obj\Debug\Window1.baml

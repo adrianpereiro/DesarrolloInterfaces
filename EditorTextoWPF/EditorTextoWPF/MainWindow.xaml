@@ -1,0 +1,54 @@
+﻿<Window x:Class="EditorTextoWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EditorTextoWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Menu Grid.Row="0">
+            <MenuItem Header="Archivo">
+                <MenuItem Header="Nuevo"></MenuItem>
+                <MenuItem Header="Abrir"></MenuItem>
+                <MenuItem Header="Guardar"></MenuItem>
+                <MenuItem Header="Guardar como..."></MenuItem>
+            </MenuItem>
+            <MenuItem Header="Editar">
+                <MenuItem Header="Fuente">
+                    <MenuItem Header="Times New Roman"></MenuItem>
+                    <MenuItem Header="Comic Sans"></MenuItem>
+                </MenuItem>
+                <MenuItem Header="Copiar"></MenuItem>
+                <MenuItem Header="Cortar"></MenuItem>
+                <MenuItem Header="Pegar"></MenuItem>
+            </MenuItem>
+        </Menu>
+        <TextBox Margin="100,20" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Auto"  Grid.Row="2" AcceptsReturn="True" AutomationProperties.IsOffscreenBehavior="Onscreen" />
+        <ToolBar Grid.Row="1" >
+            <Button Height="40" Margin="0,0,0,0" Width="60" Click="Button_Click"  >
+                <Image Source="iconoGuardar.png"></Image>
+            </Button>
+            <Button Height="40" Margin="0,0,0,0" Width="60"  >
+                <Image Source="iconoGuardar.png"></Image>
+            </Button>
+            <Button Height="40" Margin="0,0,0,0" Width="60"  >
+                <Image Source="iconoGuardar.png"></Image>
+            </Button>
+            <Button Height="40" Margin="0,0,0,0" Width="60"  >
+                <Image Source="iconoGuardar.png"></Image>
+            </Button>
+            <Button Height="40" Margin="0,0,0,0" Width="60"  >
+                <Image Source="iconoGuardar.png"></Image>
+            </Button>
+        </ToolBar>
+
+    </Grid
+        >
+</Window>
