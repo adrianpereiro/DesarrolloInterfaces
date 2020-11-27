@@ -38,13 +38,19 @@ namespace Mahjong
             FileDialog fd = new OpenFileDialog();
             fd.ShowDialog();
         }
-
+       
         private void mnSalir_Click(object sender, RoutedEventArgs e)
         {
             if (MessageBox.Show("Estas seguro de que quieres salir?", "Salir", MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.Yes)
             {
                 this.Close();
             }
+        }
+
+        private void mnHallOfFame_Click(object sender, RoutedEventArgs e)
+        {
+            HallOfFame HallOfFame = new HallOfFame();
+            HallOfFame.ShowDialog();
         }
     }
 }

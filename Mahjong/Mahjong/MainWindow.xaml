@@ -27,7 +27,7 @@
                 <MenuItem x:Name="mnSalir" Header="Salir" Click="mnSalir_Click"></MenuItem>
             </MenuItem>
             <MenuItem x:Name="mnPuntuaciones" Header="Puntuaciones">
-                <MenuItem x:Name="mnHallOfFame" Header="Hall of fame"></MenuItem>
+                <MenuItem x:Name="mnHallOfFame" Header="Hall of fame" Click="mnHallOfFame_Click"></MenuItem>
                 <MenuItem x:Name="mnExportar" Header="Exportar" Click="mnExportar_Click"></MenuItem>
             </MenuItem>
         </Menu>

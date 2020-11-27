@@ -15,12 +15,17 @@ using System.Windows.Shapes;
 namespace Mahjong
 {
     /// <summary>
-    /// Lógica de interacción para Window1.xaml
+    /// Lógica de interacción para HallOfFame.xaml
     /// </summary>
-    public partial class Window1 : Window
+    public partial class HallOfFame : Window
     {
-        public Window1()
+        public List<Jugador> ListaJugadores { get; set; }
+        public HallOfFame()
         {
+            ListaJugadores = new List<Jugador>();
+            ListaJugadores.Add(new Jugador(1,"Prueba",122));
+            ListaJugadores.Add(new Jugador(2,"Prueba1",132));
+            this.DataContext = this;
             InitializeComponent();
         }
     }
