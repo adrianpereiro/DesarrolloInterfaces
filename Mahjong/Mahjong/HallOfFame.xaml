@@ -14,15 +14,14 @@
             <RowDefinition Height="90*"></RowDefinition>
             <RowDefinition Height="10*"></RowDefinition>
         </Grid.RowDefinitions>
-        <DataGrid Grid.Row="0" x:Name="dgJugadores" ItemsSource="{Binding ListaJugadores}">
-            <!-- Asi podriamos añadir columnas personalizadas añadiendo AutoGenerateColumns="False" a DataGrid 
+        <DataGrid Grid.Row="0" x:Name="dgJugadores" ItemsSource="{Binding ListaJugadores}" AutoGenerateColumns="False">
             <DataGrid.Columns>
+                <DataGridTextColumn Header="Posicion" Binding="{Binding Nombre}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Puntuacion" Binding="{Binding Puntuacion}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Puntuacion" Binding="{Binding Tiempo}" IsReadOnly="True"></DataGridTextColumn>
             </DataGrid.Columns>
-            -->
         </DataGrid>
-        <Button Content="Resetear Puntuaciones" HorizontalAlignment="Left" Margin="220,19,0,0" Grid.Row="1" VerticalAlignment="Top" Width="140"/>
-        <Button Content="Cerrar" HorizontalAlignment="Left" Margin="410,19,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Resetear Puntuaciones" HorizontalAlignment="Left" Margin="220,19,0,0" Grid.Row="1" VerticalAlignment="Top" Width="140" Click="Button_Click"/>
+        <Button Content="Cerrar" HorizontalAlignment="Left" Margin="410,19,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" IsCancel="True"/>
     </Grid>
 </Window>

@@ -19,14 +19,27 @@ namespace Mahjong
     /// </summary>
     public partial class HallOfFame : Window
     {
-        public List<Jugador> ListaJugadores { get; set; }
+        public static List<Jugador> ListaJugadores { get; set; }
         public HallOfFame()
         {
-            ListaJugadores = new List<Jugador>();
-            ListaJugadores.Add(new Jugador(1,"Prueba",122));
-            ListaJugadores.Add(new Jugador(2,"Prueba1",132));
+
+            if (ListaJugadores == null)
+            {
+                ListaJugadores = new List<Jugador>();
+                ListaJugadores.Add(new Jugador(1, "Prueba", 122));
+                ListaJugadores.Add(new Jugador(2, "Prueba1", 132));
+            }
             this.DataContext = this;
+
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            ListaJugadores.Clear();
+            ListaJugadores.Add(new Jugador(1, "Prueba", 122));
+            ListaJugadores.Add(new Jugador(2, "Prueba1", 132));
+            dgJugadores.Items.Refresh();
         }
     }
 }
