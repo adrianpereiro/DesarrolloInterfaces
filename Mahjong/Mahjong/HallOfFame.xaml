@@ -16,9 +16,9 @@
         </Grid.RowDefinitions>
         <DataGrid Grid.Row="0" x:Name="dgJugadores" ItemsSource="{Binding ListaJugadores}" AutoGenerateColumns="False">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Posicion" Binding="{Binding Nombre}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Posicion" Binding="{Binding Nombre}" IsReadOnly="True"></DataGridTextColumn>
                 <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Puntuacion" Binding="{Binding Tiempo}" IsReadOnly="True"></DataGridTextColumn>
+                <DataGridTextColumn Header="Puntuacion" Binding="{Binding Tiempo}"></DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>
         <Button Content="Resetear Puntuaciones" HorizontalAlignment="Left" Margin="220,19,0,0" Grid.Row="1" VerticalAlignment="Top" Width="140" Click="Button_Click"/>
